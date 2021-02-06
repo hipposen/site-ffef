@@ -21,8 +21,7 @@ jobs:
             args: --config ./gluon/.luacheckrc
         - name: Builtargetmatrix
           run: echo "find targets"      
-               echo "::add-matrix name=target::"  $( make list-targets BROKEN=1 | /bin/sed '$!s/$/,/' ) 
-            
+               echo "::add-matrix name=target::"  $( make list-targets BROKEN=1 | /bin/sed '$!s/$/,/' )         
   build_firmware:
     needs: Configcheck
     strategy:
