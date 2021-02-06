@@ -2,6 +2,9 @@
 name: build-manual 
 on:
   workflow_dispatch:
+  push:
+    paths:
+    - ".github/workflows/build-manual.yml"
 jobs:
   Configcheck:
      runs-on: ubuntu-latest
