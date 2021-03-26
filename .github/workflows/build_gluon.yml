@@ -10,13 +10,6 @@ on:
       - "domains/**"
       - "site.conf"
       - "site.mk"
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      - ".github/workflows/build-gluon.yml"
-      - "domains/**"
-      - "site.conf"
-      - "site.mk"
 jobs:
   Configcheck:
      runs-on: ubuntu-latest
