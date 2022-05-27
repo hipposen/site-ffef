@@ -40,6 +40,7 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
           submodules: recursive
+          run: git config --global url."https://github.com/".insteadOf git://github.com/
       - name: Permissions
         run: chmod +x contrib/actions/run-build.sh contrib/actions/install-dependencies.sh
       - name: Install Dependencies
